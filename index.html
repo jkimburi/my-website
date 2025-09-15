@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Jose-Maria Kimburi</title>
+  <meta name="description" content="Author & Filmmaker">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/FAVICON.png" type="image/png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0f1115;
+      --muted:#9aa0a6;
+      --text:#e7e9ec;
+      --accent:#7bd389;
+      --card:rgba(255,255,255,0.02);
+      --radius:12px;
+      --maxWidth:1100px;
+      --font:'Inter', system-ui, -apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:var(--font);
+      background:linear-gradient(180deg,#07070a 0%,var(--bg) 100%);
+      color:var(--text);
+      line-height:1.45;
+      font-size:16px;
+    }
+    .container{max-width:var(--maxWidth);margin:0 auto;padding:1.25rem}
+
+    /* Header navigation */
+    header{padding:1rem 0}
+    nav ul{display:flex;gap:1rem;list-style:none;justify-content:center}
+    .navLink{color:var(--muted);text-decoration:none;padding:.4rem .6rem;border-radius:8px;font-weight:600}
+    .navLink:hover{background:rgba(255,255,255,0.03);color:#fff;text-decoration:none}
+
+    /* Hero section */
+    .heroGallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1.5rem}
+    .heroGallery img{width:100%;height:250px;object-fit:cover;border-radius:var(--radius)}
+
+    .heroName{text-align:center;margin-top:2rem}
+    .heroName h1{font-family:'Bitter',serif;font-weight:700;font-size:3rem;margin-bottom:.25rem}
+    .heroName p{font-family:'Mrs Saint Delafield',cursive;font-size:3rem;color:var(--accent);margin:0} /* increased by 0.5rem */
+
+    /* Bubble links */
+    .homeBubbles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem}
+    .bubbleCard{background:var(--card);border-radius:var(--radius);padding:1.25rem;text-align:center;transition:transform .2s, box-shadow .2s;cursor:pointer}
+    .bubbleCard:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,0.25)}
+    .bubbleCard h3{margin-bottom:.5rem;font-size:1.35rem;color:var(--accent)}
+    .bubbleCard p{font-size:.95rem;color:var(--muted)}
+
+    /* Biography */
+    .biography{display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;margin-top:3rem;gap:1rem}
+    .biographyText h2{font-family:'Zeyada',cursive;font-weight:normal;font-size:5.5rem;color:#fff;margin-bottom:1rem;text-align:center} /* increased by 1rem */
+    .biographyText p{margin-bottom:.75rem;color:#fff;font-size:1rem}
+
+    /* Updates */
+    .updates{margin-top:2rem;text-align:center}
+    .updatesText p{margin-bottom:1rem;color:#fff;font-size:1rem}
+    .updatesText a{color:var(--accent);text-decoration:underline}
+    .updatesText a:hover,.updatesText a:focus{color:#fff;text-decoration:none}
+
+    /* Footer */
+    footer{border-top:1px solid rgba(255,255,255,0.03);padding:1.25rem 0;margin-top:2.5rem;color:var(--muted);font-size:.95rem}
+    footer div{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:1.5rem}
+    footer a{color:var(--accent);text-decoration:underline}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="siteHeader">
+    <div class="container row">
+      <nav aria-label="Primary navigation">
+        <ul class="navList">
+          <li><a class="navLink" href="books.html">Books</a></li>
+          <li><a class="navLink" href="media.html">Media</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container">
+
+    <!-- Hero gallery -->
+    <section class="heroGallery" aria-label="Gallery of images">
+      <img src="assets/Jose direct.jpg" alt="Gallery image 1">
+      <img src="assets/group looking into camera.jpg" alt="Gallery image 2">
+      <img src="assets/Jose looking away.jpg" alt="Gallery image 3">
+    </section>
+
+    <!-- Hero name & signature -->
+    <section class="heroName">
+      <h1>Jose-Maria Kimburi</h1>
+      <p>Author & Filmmaker</p>
+    </section>
+
+    <!-- Bubble links -->
+    <section class="homeBubbles">
+      <div class="bubbleCard" onclick="location.href='books.html'">
+        <h3>Books</h3>
+        <p>Explore published works on people-place relationships, social change and identity.</p>
+      </div>
+      <div class="bubbleCard" onclick="location.href='media.html'">
+        <h3>Media</h3>
+        <p>Watch films and short documentaries that explore environmental and social themes.</p>
+      </div>
+    </section>
+
+    <!-- Biography section -->
+    <section class="biography">
+      <div class="biographyText">
+        <h2>J.K</h2>
+        <br>
+        <p>Jose-Maria Kimburi is an 18-year-old author & filmmaker based in the UK. His work explores both human and physical change through geography, with creative projects centred around people-place relationships.</p>
+        <p><i>18 Reflections: Divides, Epidemics and the Generation Caught in Between is his debut book, written to articulate the complex realities his generation faces as they grow up amid social, environmental, economic and health challenges.</i></p>
+        <p><i>BioVerse TV: Unplugging from Social Media is his debut documentary, encouraging people to step back from the constant busyness of digital life and reconnect with the natural world. The film highlights the mental health benefits of spending time in nature while showcasing its beauty and biodiversity. By weaving together personal experiences, expert interviews and practical advice, BioVerse TV presents a refreshing and accessible way to rethink our relationship with both technology and the environment.</i></p>
+
+        <section class="updates">
+          <div class="updatesText">
+            <p>Both his debut book and debut documentary will be released in the coming months.</p>
+            <p>Follow his Instagram (<a href="https://instagram.com/JKimburi" target="_blank">@JKimburi</a>) for more information and updates.</p>
+            <p>
+              <a href="mailto:info@j-mk.com">info@j-mk.com</a> - General Enquiries<br>
+              <a href="mailto:books@j-mk.com">books@j-mk.com</a> - Book Enquiries<br>
+              <a href="mailto:media@j-mk.com">media@j-mk.com</a> - Media Enquiries
+            </p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div>
+        <p>© 2025 Jose-Maria Kimburi. All rights reserved.</p>
+        <p>For all general enquiries, email <a href="mailto:info@j-mk.com">info@j-mk.com</a></p>
+      </div>
+    </footer>
+
+  </main>
+
+</body>
+</html>

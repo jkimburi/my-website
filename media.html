@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Media | Jose-Maria Kimburi</title>
+  <meta name="description" content="Media and film work by Jose-Maria Kimburi.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/FAVICON.png" type="image/png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f1115;
+      --muted: #9aa0a6;
+      --accent: #7bd389;
+      --card: rgba(255,255,255,0.02);
+      --radius: 12px;
+      --maxWidth: 1100px;
+      --font: 'Inter', system-ui, -apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      background: linear-gradient(180deg,#07070a 0%,var(--bg) 100%);
+      color: #e7e9ec;
+      font-family: var(--font);
+      line-height: 1.45;
+      font-size: 16px;
+    }
+
+    .container { max-width: var(--maxWidth); margin: 0 auto; padding: 1.25rem; }
+
+    /* Move content closer to header */
+    main.container { margin-top: -1.5rem; }
+
+    /* Header */
+    header { padding: 1rem 0; }
+    nav ul { display: flex; gap: 1rem; list-style: none; justify-content: center; }
+    .navLink { color: var(--muted); text-decoration: none; padding: .4rem .6rem; border-radius: 8px; }
+    .navLink:hover { background: rgba(255,255,255,0.03); color: #fff; }
+
+    /* Media grid */
+    .grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
+    .mediaCard { background: var(--card); padding: 1rem; border-radius: var(--radius); }
+    .mediaMeta { display: flex; align-items: center; justify-content: space-between; gap: .6rem; }
+    .metaLeft { display: flex; flex-direction: column; }
+    .metaLeft p { color: var(--muted); }
+
+    .videoGrid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1rem; }
+    .videoItem { border-radius: 10px; overflow: hidden; background: rgba(255,255,255,0.02); }
+    .videoMeta { padding: .85rem; }
+
+    .videoWrap { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; }
+    .videoWrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+    .actions { display: flex; gap: .6rem; margin-top: .6rem; }
+    .btn { display: inline-block; padding: .45rem .8rem; border-radius: 9px; text-decoration: none; font-weight: 600; }
+    .btnPrimary { background: linear-gradient(90deg,var(--accent),#5bcf9a); color: #08110a; }
+    .btnGhost { border: 1px solid rgba(255,255,255,0.06); color: var(--muted); background: transparent; }
+
+    footer { border-top: 1px solid rgba(255,255,255,0.03); padding: 1.25rem 0; margin-top: 2.5rem; color: var(--muted); font-size: .95rem; }
+    footer a { color: var(--accent); text-decoration: underline; }
+
+    @media(min-width:880px) { .videoGrid { grid-template-columns: repeat(2,1fr); } }
+  </style>
+</head>
+<body>
+  
+  <header class="siteHeader">
+    <div class="container row">
+      <nav aria-label="Primary navigation">
+        <ul class="navList">
+          <li><a class="navLink" href="index.html">Home</a></li>
+          <li><a class="navLink" href="books.html">Books</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid">
+      <div class="mediaCard">
+        <div class="mediaMeta">
+          <div class="metaLeft">
+            <strong>BioVerse TV: Unplugging from Social Media</strong>
+            <p class="muted">Take a look at my debut documentary which I produced and directed.</p>
+          </div>
+        </div>
+
+        <div class="videoGrid">
+          <!-- Video 1 -->
+          <article class="videoItem">
+            <div class="videoWrap">
+              <iframe loading="lazy" src="https://www.youtube.com/embed/ul8YApOvM2c?si=_858SxjHbDiN-DzA" title="Short documentary trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="videoMeta">
+              <h3>BioVerse TV: Unplugging from Social Media | Lucy Lapwing!</h3>
+              <p class="muted">Lucy Lapwing, one of the faces of BBC Springwatch, joins BioVerse TV: Unplugging from Social Media, sharing her experiences and expertise.</p>
+              <div class="actions">
+                <a class="btn btnPrimary" href="https://youtu.be/ul8YApOvM2c?si=_858SxjHbDiN-DzA" target="_blank" rel="noopener noreferrer">Open on YouTube</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video 2 -->
+          <article class="videoItem">
+            <div class="videoWrap">
+              <iframe loading="lazy" src="https://www.youtube.com/embed/XykgaUQwXy4?si=oX1gL6idvL12PLXt" title="Interview about book themes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="videoMeta">
+              <h3>BioVerse TV: Unplugging from Social Media | Jessica Bennett!</h3>
+              <p class="muted">A 20 minute interview discussing the themes of the latest book and documentary process.</p>
+              <div class="actions">
+                <a class="btn btnPrimary" href="https://youtu.be/XykgaUQwXy4?si=oX1gL6idvL12PLXt" target="_blank" rel="noopener noreferrer">Open on YouTube</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video 3 -->
+          <article class="videoItem">
+            <div class="videoWrap">
+              <iframe loading="lazy" src="https://youtube.com/playlist?list=PL41K9nC7wl_5xKXk1wzwWH9q_zfBZJ7tf&si=wNtbemJS_lwixwNx" title="Trailer for feature series" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="videoMeta">
+              <h3>BioVerse TV: Unplugging from Social Media | Official Documentary Trailer - 11/10/25</h3>
+              <p class="muted">This documentary explores the mental health benefits of stepping away from the digital world and rediscovering the natural world around us. <br> Full documentary out on Saturday 25th October 2025 at 18:00 BST.</p>
+              <div class="actions">
+                <a class="btn btnPrimary" href="https://youtube.com/playlist?list=PL41K9nC7wl_5xKXk1wzwWH9q_zfBZJ7tf&si=wNtbemJS_lwixwNx" target="_blank" rel="noopener noreferrer">Open on YouTube</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <aside class="mediaCard">
+        <h3 style="margin-bottom:.5rem">Additional resources</h3>
+        <p class="muted">Media contact: <a href="mailto:media@j-mk.com">media@j-mk.com</a></p>
+      </aside>
+    </section>
+
+    <footer>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:1.5rem">
+        <p>© 2025 Jose-Maria Kimburi. All rights reserved.</p>
+        <p class="muted">For all general enquiries, email <a href="mailto:info@j-mk.com" style="color:#7bd389; text-decoration:underline">info@j-mk.com</a></p>
+      </div>
+    </footer>
+  </main>
+
+</body>
+</html>
