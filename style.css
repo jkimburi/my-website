@@ -158,28 +158,7 @@ footer div {
   }
 }
 
-.socialIcons {
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem; /* more space between icons */
-  margin-top: 1.5rem;
-}
 
-.socialIcons a svg {
-  width: 4px;  /* original size */
-  height: 4px;
-  transition: transform 0.2s;
-}
-
-.socialIcons a.instagram svg { fill: #E1306C; }
-.socialIcons a.x svg { fill: #1DA1F2; }
-.socialIcons a.linkedin svg { fill: #0077B5; }
-.socialIcons a.tiktok svg { fill: #000000; }
-
-.socialIcons a:hover svg {
-  transform: scale(1.2);
-  opacity: 0.8;
-}
 
 
 
