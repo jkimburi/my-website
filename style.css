@@ -166,8 +166,8 @@ footer div {
 }
 
 .socialIcons a svg {
-  width: 24px;  /* original size */
-  height: 24px;
+  width: 4px;  /* original size */
+  height: 4px;
   transition: transform 0.2s;
 }
 
@@ -180,6 +180,7 @@ footer div {
   transform: scale(1.2);
   opacity: 0.8;
 }
+
 
 
 
