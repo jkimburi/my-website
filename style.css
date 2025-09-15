@@ -161,16 +161,24 @@ footer div {
 .socialIcons {
   display: flex;
   justify-content: center;
-  gap: 1.25rem;
-  margin-top: 1rem;
+  gap: 2rem; /* more space between icons */
+  margin-top: 1.5rem;
 }
 
 .socialIcons a svg {
-  transition: transform 0.2s, fill 0.2s;
+  width: 40px;  /* larger size */
+  height: 40px;
+  transition: transform 0.2s;
 }
 
+.socialIcons a.instagram svg { fill: #E1306C; }
+.socialIcons a.x svg { fill: #1DA1F2; }
+.socialIcons a.linkedin svg { fill: #0077B5; }
+.socialIcons a.tiktok svg { fill: #000000; }
+
 .socialIcons a:hover svg {
-  transform: scale(1.2);
-  fill: #ffffff; /* hover colour */
+  transform: scale(1.3);
+  opacity: 0.8;
 }
+
 
