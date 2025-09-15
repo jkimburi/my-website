@@ -97,21 +97,21 @@ header nav { display: flex; justify-content: center; }
 
 /* Book title */
 .bookTitle {
-  font-family: 'Homemade Apple', cursive; /* Homemade Apple font */
-  font-size: 2.5rem;                      /* slightly smaller */
-  color: #fff;                             /* white text */
-  font-weight: normal;                     /* normal weight */
+  font-family: 'Homemade Apple', cursive;
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: normal;
   text-align: center;
   margin-bottom: 0.25rem;
 }
 
 /* Book subtitle */
 .bookSubtitle {
-  font-family: var(--font);               /* default font */
+  font-family: var(--font);
   font-size: 1.25rem;
-  color: #fff;                             /* white */
-  font-style: normal;                      /* remove italic */
-  font-weight: normal;                     /* normal weight */
+  color: #fff;
+  font-style: normal;
+  font-weight: normal;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -127,8 +127,20 @@ header nav { display: flex; justify-content: center; }
 /* ===========================
    Footer
 =========================== */
-footer { border-top: 1px solid rgba(255,255,255,0.03); padding: 1.25rem 0; margin-top: 2.5rem; color: var(--muted); font-size: .95rem; }
-footer div { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .6rem; }
+footer {
+  border-top: 1px solid rgba(255,255,255,0.03);
+  padding: 1.25rem 0;
+  margin-top: 2.5rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
+footer div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
 
 /* ===========================
    Responsive
@@ -136,5 +148,12 @@ footer div { display: flex; align-items: center; justify-content: space-between;
 @media(max-width:880px) {
   .bookRow { grid-template-columns: 1fr; }
   .cover { min-height: 250px; }
-  footer div { flex-direction: column; margin-top: .75rem; }
+
+  footer div {
+    flex-direction: column;
+    align-items: center;      /* centres items */
+    justify-content: center;  /* centres spacing */
+    text-align: center;       /* centres text */
+    margin-top: .75rem;
+  }
 }
