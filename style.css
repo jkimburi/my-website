@@ -2,7 +2,6 @@
    Root variables & base
 =========================== */
 :root {
-  /* Dark mode defaults */
   --bg: #0f1115;
   --muted: #9aa0a6;
   --text: #e7e9ec;
@@ -12,32 +11,6 @@
   --maxWidth: 1100px;
   --gutter: 1.25rem;
   --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-}
-
-/* Light mode overrides */
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #ffffff;
-    --muted: #555555;
-    --text: #111111;
-    --accent: #007f5f;
-    --card: rgba(0,0,0,0.04);
-  }
-
-  body {
-    background: linear-gradient(180deg,#f4f4f9 0%,var(--bg) 100%);
-    color: var(--text);
-  }
-
-  .bookTitle, .bookSubtitle,
-  .updatesText p,
-  .biographyText p {
-    color: var(--text);
-  }
-
-  a:hover, a:focus {
-    color: #000; /* dark hover on light background */
-  }
 }
 
 /* Reset & base */
@@ -178,9 +151,9 @@ footer div {
 
   footer div {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    align-items: center;      /* centres items */
+    justify-content: center;  /* centres spacing */
+    text-align: center;       /* centres text */
     margin-top: .75rem;
   }
 }
