@@ -157,3 +157,20 @@ footer div {
     margin-top: .75rem;
   }
 }
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.socialIcons a svg {
+  transition: transform 0.2s, fill 0.2s;
+}
+
+.socialIcons a:hover svg {
+  transform: scale(1.2);
+  fill: #ffffff; /* hover colour */
+}
+
