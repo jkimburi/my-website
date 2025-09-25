@@ -28,6 +28,32 @@
     <meta name="twitter:description" content="18 Reflections by Jose-Maria Kimburi.">
     <meta name="twitter:image" content="https://j-mk.com/Assets/bookcover.jpg">
 
+    <!-- Paste this in <head> on index.html, books.html, media.html (after meta tags) -->
+<script>
+(function () {
+  const p = location.pathname;
+
+  // 1) If URL ends with .html -> do a client redirect to the clean path.
+  if (p.endsWith('.html')) {
+    // /index.html -> /
+    // /books.html -> /books
+    let clean = p.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+    if (!clean) clean = '/';
+    // remove trailing slash for non-root (so /books/ -> /books)
+    if (clean !== '/' && clean.endsWith('/')) clean = clean.replace(/\/+$/, '');
+    location.replace(location.origin + clean + location.search + location.hash);
+    return; // stop further script (we're redirecting)
+  }
+
+  // 2) If server provided a trailing slash (e.g. /books/), remove it from the address bar
+  // but only for non-root paths (don't change "/" itself)
+  if (p.length > 1 && p.endsWith('/')) {
+    const noSlash = p.replace(/\/+$/, '');
+    history.replaceState({}, '', noSlash + location.search + location.hash);
+  }
+})();
+</script>
+
     <!-- Favicon -->
     <link rel="icon" href="/Assets/favicon.png" type="image/png">
 
@@ -326,4 +352,5 @@
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   </body>
 </html>
+
 
