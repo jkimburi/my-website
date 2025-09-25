@@ -28,7 +28,7 @@
   <!-- Favicon -->
   <link rel="icon" href="/Assets/favicon.png" type="image/png">
 
-  <!-- Performance hints (use root-based paths) -->
+  <!-- Performance hints (root-based) -->
   <link rel="preload" href="/Assets/away.jpg" as="image">
   <link rel="preload" href="/Assets/group.jpg" as="image">
   <link rel="preload" href="/Assets/direct.jpg" as="image">
@@ -41,43 +41,39 @@
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
   <style>
-    :root { --bg: #0f1115; --muted: #9aa0a6; --text: #e7e9ec; --accent: #7bd389; --card: rgba(255,255,255,0.02); --radius: 12px; --maxWidth: 1100px; --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--font); background: linear-gradient(180deg,#07070a 0%,var(--bg) 100%); color: var(--text); line-height: 1.45; font-size: 16px; }
-    .container { max-width: var(--maxWidth); margin: 0 auto; padding: 1.25rem; }
-    header { padding: 1rem 0; }
-    nav ul { display: flex; gap: 1rem; list-style: none; justify-content: center; }
-    .navLink { color: var(--muted); text-decoration: none; padding: .4rem .6rem; border-radius: 8px; font-weight: 600; }
-    .navLink:hover { background: rgba(255,255,255,0.03); color: #fff; }
-    .heroGallery { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 1rem; margin-top: 1.5rem; }
-    .heroGallery img { width: 100%; height: 250px; object-fit: cover; border-radius: var(--radius); }
-    .heroName { text-align: center; margin-top: 2rem; }
-    .heroName h1 { font-family: 'Bitter', serif; font-weight: 700; font-size: 3rem; margin-bottom: .25rem; }
-    .heroName p { font-family: 'Mrs Saint Delafield', cursive; font-size: 3rem; color: var(--accent); margin: 0; }
-    .homeBubbles { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1rem; margin-top: 2rem; }
-    .bubbleCard { background: var(--card); border-radius: var(--radius); padding: 1.25rem; text-align: center; transition: transform .2s, box-shadow .2s; cursor: pointer; }
-    .bubbleCard:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.25); }
-    .bubbleCard h3 { margin-bottom: .5rem; font-size: 1.35rem; color: var(--accent); }
-    .bubbleCard p { font-size: .95rem; color: var(--muted); }
-    .biography { display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; margin-top: 3rem; gap: 1rem; }
-    .biographyText h2 { font-family: 'Zeyada', cursive; font-weight: normal; font-size: 5.5rem; color: #fff; margin-bottom: 1rem; text-align: center; }
-    .biographyText p { margin-bottom: .75rem; color: #fff; font-size: 1rem; }
-    .updates { margin-top: 2rem; text-align: center; }
-    .updatesText p { margin-bottom: 1rem; color: #fff; font-size: 1rem; }
-    .updatesText a { color: var(--accent); text-decoration: underline; }
-    .updatesText a:hover, .updatesText a:focus { color: #fff; text-decoration: none; }
-    footer { border-top: 1px solid rgba(255,255,255,0.03); padding: 1.25rem 0; margin-top: 2.5rem; color: var(--muted); font-size: .95rem; }
-    footer div { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-top: 1.5rem; }
-    footer a { color: var(--accent); text-decoration: underline; }
-    .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0 0 0 0) !important; white-space: nowrap !important; border: 0 !important; }
-    @media(max-width:880px) {
-      .heroGallery img { height: 180px; }
-      .biographyText h2 { font-size: 4rem; }
-    }
+    :root { --bg:#0f1115; --muted:#9aa0a6; --text:#e7e9ec; --accent:#7bd389; --card:rgba(255,255,255,0.02); --radius:12px; --maxWidth:1100px; --font:'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:var(--font);background:linear-gradient(180deg,#07070a 0%,var(--bg) 100%);color:var(--text);line-height:1.45;font-size:16px}
+    .container{max-width:var(--maxWidth);margin:0 auto;padding:1.25rem}
+    header{padding:1rem 0}
+    nav ul{display:flex;gap:1rem;list-style:none;justify-content:center}
+    .navLink{color:var(--muted);text-decoration:none;padding:.4rem .6rem;border-radius:8px;font-weight:600}
+    .navLink:hover{background:rgba(255,255,255,0.03);color:#fff}
+    .heroGallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1.5rem}
+    .heroGallery img{width:100%;height:250px;object-fit:cover;border-radius:var(--radius)}
+    .heroName{text-align:center;margin-top:2rem}
+    .heroName h1{font-family:'Bitter',serif;font-weight:700;font-size:3rem;margin-bottom:.25rem}
+    .heroName p{font-family:'Mrs Saint Delafield',cursive;font-size:3rem;color:var(--accent);margin:0}
+    .homeBubbles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem}
+    .bubbleCard{background:var(--card);border-radius:var(--radius);padding:1.25rem;text-align:center;transition:transform .2s,box-shadow .2s;cursor:pointer}
+    .bubbleCard:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,0.25)}
+    .bubbleCard h3{margin-bottom:.5rem;font-size:1.35rem;color:var(--accent)}
+    .bubbleCard p{font-size:.95rem;color:var(--muted)}
+    .biography{display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;margin-top:3rem;gap:1rem}
+    .biographyText h2{font-family:'Zeyada',cursive;font-weight:normal;font-size:5.5rem;color:#fff;margin-bottom:1rem;text-align:center}
+    .biographyText p{margin-bottom:.75rem;color:#fff;font-size:1rem}
+    .updates{margin-top:2rem;text-align:center}
+    .updatesText p{margin-bottom:1rem;color:#fff;font-size:1rem}
+    .updatesText a{color:var(--accent);text-decoration:underline}
+    .updatesText a:hover,.updatesText a:focus{color:#fff;text-decoration:none}
+    footer{border-top:1px solid rgba(255,255,255,0.03);padding:1.25rem 0;margin-top:2.5rem;color:var(--muted);font-size:.95rem}
+    footer div{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:1.5rem}
+    footer a{color:var(--accent);text-decoration:underline}
+    .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;border:0!important}
+    @media(max-width:880px){.heroGallery img{height:180px}.biographyText h2{font-size:4rem}}
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header class="siteHeader">
     <div class="container row">
       <nav aria-label="Primary navigation">
@@ -89,46 +85,34 @@
     </div>
   </header>
 
-  <!-- Main content -->
   <main class="container" itemscope itemtype="https://schema.org/Person" aria-label="Main content for Jose-Maria Kimburi">
-
-    <!-- Hero gallery of images -->
     <section class="heroGallery" aria-label="Gallery of images">
-      <!-- Responsive images with eager loading -->
+      <!-- using root-based src only (no srcset) so desktop won't attempt missing variants -->
       <img src="/Assets/away.jpg"
-           srcset="/Assets/away.jpg 1200w, /Assets/away-medium.jpg 800w, /Assets/away-small.jpg 480w"
-           sizes="(max-width:880px) 100vw, 33vw"
            width="1200" height="250"
            alt="Jose-Maria Kimburi at work"
            loading="eager" decoding="async">
 
       <img src="/Assets/group.jpg"
-           srcset="/Assets/group.jpg 1200w, /Assets/group-medium.jpg 800w, /Assets/group-small.jpg 480w"
-           sizes="(max-width:880px) 100vw, 33vw"
            width="1200" height="250"
            alt="Group shot with collaborators"
            loading="eager" decoding="async">
 
       <img src="/Assets/direct.jpg"
-           srcset="/Assets/direct.jpg 1200w, /Assets/direct-medium.jpg 800w, /Assets/direct-small.jpg 480w"
-           sizes="(max-width:880px) 100vw, 33vw"
            width="1200" height="250"
            alt="Directing on location"
            loading="eager" decoding="async">
     </section>
 
-    <!-- Hero name & signature -->
     <section class="heroName">
       <h1 itemprop="name">Jose-Maria Kimburi</h1>
       <p itemprop="jobTitle">Author & Filmmaker</p>
     </section>
 
-    <!-- Aliases for discovery -->
     <div class="sr-only" aria-hidden="false">
       Jose-Maria, Jose Kimburi, Jose-Maria Kimburi, Kimburi J, Kimburi, J Kimburi, J-MK, 18 Reflections, 18 Reflections: Divides, Epidemics and the Generation Caught in Between, BioVerse TV, JKimburi
     </div>
 
-    <!-- Bubble links -->
     <section class="homeBubbles" aria-label="Quick links">
       <div class="bubbleCard" onclick="location.href='books.html'" role="link" tabindex="0" aria-label="Books — Explore books by Kimburi">
         <h3>Books</h3>
@@ -140,7 +124,6 @@
       </div>
     </section>
 
-    <!-- Biography section -->
     <section class="biography" aria-label="Biography">
       <div class="biographyText">
         <h2 itemprop="alternateName">J.K</h2>
@@ -162,7 +145,6 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer>
       <div>
         <p>© 2025 Jose-Maria Kimburi. All rights reserved.</p>
@@ -171,7 +153,6 @@
     </footer>
   </main>
 
-  <!-- JSON-LD structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -184,9 +165,7 @@
         "jobTitle": "Author & Filmmaker",
         "url": "https://j-mk.com/",
         "image": "https://j-mk.com/Assets/away.jpg",
-        "sameAs": [
-          "https://www.instagram.com/JKimburi"
-        ],
+        "sameAs": ["https://www.instagram.com/JKimburi"],
         "description": "Jose-Maria Kimburi is an author and filmmaker whose work explores human and physical change through geography. Author of 18 Reflections and executive producer & director of BioVerse TV."
       },
       {
@@ -199,14 +178,6 @@
           "target": "https://j-mk.com/?s={search_term_string}",
           "query-input": "required name=search_term_string"
         }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://j-mk.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Books", "item": "https://j-mk.com/books.html" },
-          { "@type": "ListItem", "position": 3, "name": "Media", "item": "https://j-mk.com/media.html" }
-        ]
       }
     ]
   }
