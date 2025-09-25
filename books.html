@@ -29,9 +29,7 @@
   <meta name="twitter:image" content="https://www.j-mk.com/Assets/bookcover.jpg">
 
   <!-- Performance hints -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="/Assets/bookcover.jpg" as="image">
-  <link rel="icon" href="/Assets/favicon.png" type="image/png">
+ 
 
 
   <!-- Fonts -->
@@ -72,16 +70,7 @@
     .booksList { display: grid; gap: 1rem; margin-top: 2rem; }
     .bookRow { display: grid; grid-template-columns: 320px 1fr; gap: 1rem; align-items: stretch; }
     .cover { border-radius: var(--radius); overflow: hidden; min-height: 200px; background: var(--card); display: flex; }
-    
-.cover img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 100%;
-  object-fit: cover;
-  border-radius: var(--radius);
-  background-color: #0b0b0b; /* fallback background */
-}
+    .cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     .meta { padding: 1rem; background: var(--card); border-radius: var(--radius); display: flex; flex-direction: column; justify-content: center; }
 
@@ -278,6 +267,7 @@
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 </body>
 </html>
+
 
 
 
