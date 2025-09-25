@@ -29,15 +29,6 @@
   <link rel="icon" href="Assets/favicon.png" type="image/png">
 
   <!-- Performance hints -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="Assets/away.jpg" as="image">
-  <link rel="preload" href="Assets/group.jpg" as="image">
-  <link rel="preload" href="Assets/direct.jpg" as="image">
-  <link rel="preload" href="/Assets/away.jpg" as="image">
-  <link rel="preload" href="/Assets/group.jpg" as="image">
-  <link rel="preload" href="/Assets/direct.jpg" as="image">
-  <link rel="icon" href="/Assets/favicon.png" type="image/png">
-
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
@@ -76,15 +67,7 @@
 
     /* Hero section */
     .heroGallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1.5rem}
-/* ensure images are block-level and have a fixed height for stable layout */
-.heroGallery img {
-  display: block;
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: var(--radius);
-  background-color: #0b0b0b; /* helps avoid a flash of empty area */
-}
+    .heroGallery img{width:100%;height:250px;object-fit:cover;border-radius:var(--radius)}
 
     .heroName{text-align:center;margin-top:2rem}
     .heroName h1{font-family:'Bitter',serif;font-weight:700;font-size:3rem;margin-bottom:.25rem}
@@ -274,6 +257,7 @@
 
 </body>
 </html>
+
 
 
 
