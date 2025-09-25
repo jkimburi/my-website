@@ -3,10 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Primary page title and description (kept original and extended) -->
   <title>Books | Jose-Maria Kimburi</title>
   <meta name="description" content="Books by Jose-Maria Kimburi. Read blurbs, view details and open a live Amazon page for each title.">
 
-  <!-- Favicon -->
+  <!-- SEO and discovery -->
+  <meta name="author" content="Jose-Maria Kimburi">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="Jose-Maria, Jose Kimburi, Jose-Maria Kimburi, Kimburi, J Kimburi, J-MK, 18 Reflections, 18 Reflections: Divides, Epidemics and the Generation Caught in Between, Jose-Maria author, J-MK books">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.j-mk.com/books/">
+
+  <!-- Social / sharing metadata (Open Graph and Twitter) -->
+  <meta property="og:type" content="book">
+  <meta property="og:title" content="18 Reflections — Jose-Maria Kimburi">
+  <meta property="og:description" content="18 Reflections by Jose-Maria Kimburi.">
+  <meta property="og:url" content="https://www.j-mk.com/books/">
+  <meta property="og:image" content="https://www.j-mk.com/Assets/bookcover.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="18 Reflections — Jose-Maria Kimburi">
+  <meta name="twitter:description" content="18 Reflections by Jose-Maria Kimburi.">
+  <meta name="twitter:image" content="https://www.j-mk.com/Assets/bookcover.jpg">
+
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="Assets/bookcover.jpg" as="image">
   <link rel="icon" href="Assets/favicon.png" type="image/png">
 
   <!-- Fonts -->
@@ -24,12 +48,12 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { 
-      background: linear-gradient(180deg,#07070a 0%,var(--bg) 100%); 
-      color: #fff; 
-      font-family: var(--font); 
-      line-height: 1.45; 
-      font-size: 16px; 
+    body {
+      background: linear-gradient(180deg,#07070a 0%,var(--bg) 100%);
+      color: #fff;
+      font-family: var(--font);
+      line-height: 1.45;
+      font-size: 16px;
     }
 
     .container { max-width: var(--maxWidth); margin: 0 auto; padding: 1.25rem; }
@@ -51,23 +75,23 @@
 
     .meta { padding: 1rem; background: var(--card); border-radius: var(--radius); display: flex; flex-direction: column; justify-content: center; }
 
-    .meta h2.bookTitle { 
-      font-family: 'Cedarville Cursive', cursive; 
-      font-weight: normal; 
-      font-size: 2.7rem; 
-      color: #fff; 
-      text-align: center; 
-      margin-bottom: 0.35rem; 
+    .meta h2.bookTitle {
+      font-family: 'Cedarville Cursive', cursive;
+      font-weight: normal;
+      font-size: 2.7rem;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 0.35rem;
     }
 
-    .meta h5.bookSubtitle { 
-      font-family: 'Cedarville Cursive', cursive; 
+    .meta h5.bookSubtitle {
+      font-family: 'Cedarville Cursive', cursive;
       font-size: 1.6rem;   /* smaller size */
-      color: #ccc; 
-      font-weight: normal; 
-      font-style: normal; 
-      text-align: center; 
-      margin-bottom: 1.2rem; 
+      color: #ccc;
+      font-weight: normal;
+      font-style: normal;
+      text-align: center;
+      margin-bottom: 1.2rem;
     }
 
     .meta p { margin-bottom: .75rem; color: #fff; }
@@ -84,6 +108,19 @@
       .bookRow { grid-template-columns: 1fr; }
       .cover { min-height: 250px; }
       footer div { flex-direction: column; margin-top: .75rem; }
+    }
+
+    /* Accessible visually hidden utility for aliases and seo text */
+    .sr-only {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0 0 0 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
     }
   </style>
 </head>
@@ -102,31 +139,52 @@
 
   <main class="container">
     <section class="booksList">
-      <article class="bookRow">
+      <article class="bookRow" itemscope itemtype="https://schema.org/Book" aria-labelledby="book-title-18ref">
         <div class="cover">
-          <img src="Assets/bookcover.jpg" alt="18 Reflections book cover">
+          <!-- responsive image with lazy loading -->
+          <img src="Assets/bookcover.jpg"
+               srcset="Assets/bookcover.jpg 1200w, Assets/bookcover-medium.jpg 800w, Assets/bookcover-small.jpg 480w"
+               sizes="(max-width:880px) 100vw, 320px"
+               alt="18 Reflections book cover"
+               loading="lazy"
+               itemprop="image">
         </div>
         
         <div class="meta">
-          <h2 class="bookTitle">18 Reflections</h2>
-          <h5 class="bookSubtitle">Divides, Epidemics and the Generation Caught in Between</h5>
-          <p>18 Reflections is Kimburi's debut book, written to articulate the complex realities faced by his generation as they grow up amid social, environmental, economic and health challenges.</p>
-          <p>Kimburi explores the divides and epidemics shaping Gen Z – mental health, identity, faith, burnout, inequality and more. Each chapter begins with an anecdote, offering critical context to anchor the reflection. He wrote this because he needed to. Because silence didn’t feel like an option anymore. Silence has a cost. And he was tired of paying it.</p>
+          <!-- kept your original headings and content -->
+          <h2 id="book-title-18ref" class="bookTitle" itemprop="name">18 Reflections</h2>
+          <h5 class="bookSubtitle" itemprop="alternateName">Divides, Epidemics and the Generation Caught in Between</h5>
+
+          <p itemprop="description">18 Reflections is Kimburi's debut book, written to articulate the complex realities faced by his generation as they grow up amid social, environmental, economic and health challenges.</p>
+
+          <p itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Jose-Maria Kimburi</span> writes about the divides and epidemics shaping Gen Z, such as mental health, identity, faith, burnout and inequality. Each chapter begins with an anecdote, offering context to anchor the reflection. He wrote this because he needed to. Because silence didn’t feel like an option anymore. Silence has a cost. And he was tired of paying it.
+          </p>
+
           <p><i>This is the book many of us needed when we were fourteen. It’s the one many of us still need now.</i></p>
-          <p>Release date: XX.XX.2026
+
+          <p>Release date: <time datetime="2026-10-01" itemprop="datePublished">XX.XX.2026</time>
             <br>
             Formats: Paperback, Hardcover & eBook (Amazon Kindle, Apple, Google Play)</p>
           
-        <div class="actions">
-  <a href="https://www.amazon.co.uk/stores/Jose-Maria-Kimburi/author/B0FLM5L52Y?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true" 
-     target="_blank" class="btn btnPrimary">Amazon</a>
-  
-  <a href="https://books.apple.com/us/book/18-reflections-divides-epidemics-and-the/id6752995264" 
-     target="_blank" class="btn btnPrimary">Apple</a>
-  
-  <a href="https://play.google.com/store/books" 
-     target="_blank" class="btn btnPrimary">Google Play</a>
-</div>
+          <!-- visible purchase links with improved attributes -->
+          <div class="actions" role="group" aria-label="Purchase links for 18 Reflections">
+            <a href="https://www.amazon.co.uk/stores/Jose-Maria-Kimburi/author/B0FLM5L52Y?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true"
+               target="_blank" rel="noopener noreferrer" class="btn btnPrimary" aria-label="Buy 18 Reflections on Amazon">Amazon</a>
+            
+            <a href="https://books.apple.com/us/book/18-reflections-divides-epidemics-and-the/id6752995264"
+               target="_blank" rel="noopener noreferrer" class="btn btnPrimary" aria-label="Buy 18 Reflections on Apple Books">Apple</a>
+            
+            <a href="https://play.google.com/store/books"
+               target="_blank" rel="noopener noreferrer" class="btn btnPrimary" aria-label="Buy 18 Reflections on Google Play">Google Play</a>
+          </div>
+
+          <!-- visually hidden aliases and alternate search phrases to help search engines and assistive tech -->
+          <div class="sr-only" aria-hidden="false">
+            <!-- keep these natural, not stuffed. they are visible to screen readers -->
+            Jose-Maria, Jose Kimburi, Jose-Maria Kimburi, Kimburi, J Kimburi, J-MK, 18 Reflections, 18 Reflections: Divides, Epidemics and the Generation Caught in Between, 18 Reflections Jose-Maria, Jose-Maria author, Jose-Maria Kimburi books, J-MK author
+          </div>
+
         </div>
       </article>
     </section>
@@ -139,18 +197,70 @@
     </footer>
   </main>
 
+  <!-- Structured data: Book, Person, WebSite and BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Book",
+        "@id": "https://www.j-mk.com/books/#book",
+        "name": "18 Reflections",
+        "alternateName": "18 Reflections: Divides, Epidemics and the Generation Caught in Between",
+        "author": {
+          "@type": "Person",
+          "@id": "https://www.j-mk.com/#author",
+          "name": "Jose-Maria Kimburi"
+        },
+        "image": "https://www.j-mk.com/Assets/bookcover.jpg",
+        "description": "Reflections on identity, mental health and environment targeted at young adults.",
+        "url": "https://www.j-mk.com/books/",
+        "inLanguage": "en-GB",
+        "datePublished": "2026-06-26",
+        "isbn": "9798283299419",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.amazon.co.uk/stores/Jose-Maria-Kimburi/author/B0FLM5L52Y",
+          "priceCurrency": "GBP",
+          "price": "15.99",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.j-mk.com/",
+        "name": "Jose-Maria Kimburi",
+        "alternateName": ["Jose-Maria","Jose Kimburi","Kimburi","J Kimburi","J-MK","J-Mk"],
+        "url": "https://www.j-mk.com/",
+        "sameAs": [
+          "https://www.j-mk.com/",
+          "https://www.instagram.com/JKimburi"
+        ],
+        "jobTitle": "Author, Filmmaker, Geographer"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.j-mk.com/",
+        "url": "https://www.j-mk.com/",
+        "name": "Jose-Maria Kimburi",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.j-mk.com/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.j-mk.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Books", "item": "https://www.j-mk.com/books/" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Optional: sitemap link hint -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
