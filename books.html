@@ -35,36 +35,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* CSS as before... */
-    :root { --bg: #0f1115; --muted: #9aa0a6; --accent: #7bd389; --card: rgba(255,255,255,0.02); --radius: 12px; --maxWidth: 1100px; --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: linear-gradient(180deg,#07070a 0%,var(--bg) 100%); color: #fff; font-family: var(--font); line-height: 1.45; font-size: 16px; }
-    .container { max-width: var(--maxWidth); margin: 0 auto; padding: 1.25rem; }
-    main.container { margin-top: -1.5rem; }
-    header { padding: 1rem 0; }
-    nav ul { display: flex; gap: 1rem; list-style: none; justify-content: center; }
-    .navLink { color: var(--muted); text-decoration: none; padding: .4rem .6rem; border-radius: 8px; font-weight: 600; }
-    .navLink:hover { background: rgba(255,255,255,0.03); color: #fff; }
-    .booksList { display: grid; gap: 1rem; margin-top: 2rem; }
-    .bookRow { display: grid; grid-template-columns: 320px 1fr; gap: 1rem; align-items: stretch; }
-    .cover { border-radius: var(--radius); overflow: hidden; min-height: 200px; background: var(--card); display: flex; }
-    .cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .meta { padding: 1rem; background: var(--card); border-radius: var(--radius); display: flex; flex-direction: column; justify-content: center; }
-    .meta h2.bookTitle { font-family: 'Cedarville Cursive', cursive; font-weight: normal; font-size: 2.7rem; color: #fff; text-align: center; margin-bottom: .35rem; }
-    .meta h5.bookSubtitle { font-family: 'Cedarville Cursive', cursive; font-size: 1.6rem; color: #ccc; font-weight: normal; font-style: normal; text-align: center; margin-bottom: 1.2rem; }
-    .meta p { margin-bottom: .75rem; color: #fff; }
-    .actions { display: flex; gap: .6rem; margin-top: .6rem; justify-content: center; }
-    .btn { display: inline-block; padding: .45rem .8rem; border-radius: 9px; text-decoration: none; font-weight: 600; }
-    .btnPrimary { background: linear-gradient(90deg,var(--accent),#5bcf9a); color: #08110a; }
-    footer { border-top: 1px solid rgba(255,255,255,0.03); padding: 1.25rem 0; margin-top: 2.5rem; color: var(--muted); font-size: .95rem; }
-    footer div { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-top: 1.5rem; }
-    footer a { color: var(--accent); text-decoration: underline; }
-    @media(max-width:880px) {
-      .bookRow { grid-template-columns: 1fr; }
-      .cover { min-height: 250px; }
-      footer div { flex-direction: column; margin-top: .75rem; }
-    }
-    .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0 0 0 0) !important; white-space: nowrap !important; border: 0 !important; }
+    :root { --bg:#0f1115; --muted:#9aa0a6; --accent:#7bd389; --card:rgba(255,255,255,0.02); --radius:12px; --maxWidth:1100px; --font:'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:linear-gradient(180deg,#07070a 0%,var(--bg) 100%);color:#fff;font-family:var(--font);line-height:1.45;font-size:16px}
+    .container{max-width:var(--maxWidth);margin:0 auto;padding:1.25rem}
+    main.container{margin-top:-1.5rem}
+    header{padding:1rem 0}
+    nav ul{display:flex;gap:1rem;list-style:none;justify-content:center}
+    .navLink{color:var(--muted);text-decoration:none;padding:.4rem .6rem;border-radius:8px;font-weight:600}
+    .navLink:hover{background:rgba(255,255,255,0.03);color:#fff}
+    .booksList{display:grid;gap:1rem;margin-top:2rem}
+    .bookRow{display:grid;grid-template-columns:320px 1fr;gap:1rem;align-items:stretch}
+    .cover{border-radius:var(--radius);overflow:hidden;min-height:200px;background:var(--card);display:flex}
+    .cover img{width:100%;height:100%;object-fit:cover;display:block}
+    .meta{padding:1rem;background:var(--card);border-radius:var(--radius);display:flex;flex-direction:column;justify-content:center}
+    .meta h2.bookTitle{font-family:'Cedarville Cursive',cursive;font-weight:normal;font-size:2.7rem;color:#fff;text-align:center;margin-bottom:.35rem}
+    .meta h5.bookSubtitle{font-family:'Cedarville Cursive',cursive;font-size:1.6rem;color:#ccc;font-weight:normal;font-style:normal;text-align:center;margin-bottom:1.2rem}
+    .meta p{margin-bottom:.75rem;color:#fff}
+    .actions{display:flex;gap:.6rem;margin-top:.6rem;justify-content:center}
+    .btn{display:inline-block;padding:.45rem .8rem;border-radius:9px;text-decoration:none;font-weight:600}
+    .btnPrimary{background:linear-gradient(90deg,var(--accent),#5bcf9a);color:#08110a}
+    footer{border-top:1px solid rgba(255,255,255,0.03);padding:1.25rem 0;margin-top:2.5rem;color:var(--muted);font-size:.95rem}
+    footer div{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:1.5rem}
+    footer a{color:var(--accent);text-decoration:underline}
+    @media(max-width:880px){.bookRow{grid-template-columns:1fr}.cover{min-height:250px}footer div{flex-direction:column;margin-top:.75rem}}
+    .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;border:0!important}
   </style>
 </head>
 <body>
@@ -83,33 +78,35 @@
     <section class="booksList">
       <article class="bookRow" itemscope itemtype="https://schema.org/Book" aria-labelledby="book-title-18ref">
         <div class="cover">
-          <!-- Cover image with eager loading -->
+          <!-- Cover image: single src (no srcset) so desktop won't request missing variants -->
           <img src="/Assets/bookcover.jpg"
-               srcset="/Assets/bookcover.jpg 1200w, /Assets/bookcover-medium.jpg 800w, /Assets/bookcover-small.jpg 480w"
-               sizes="(max-width:880px) 100vw, 320px"
                width="320" height="480"
                alt="18 Reflections book cover"
-               loading="eager"
-               decoding="async"
-               itemprop="image">
+               loading="eager" decoding="async" itemprop="image">
         </div>
 
         <div class="meta">
           <h2 id="book-title-18ref" class="bookTitle" itemprop="name">18 Reflections</h2>
           <h5 class="bookSubtitle" itemprop="alternateName">Divides, Epidemics and the Generation Caught in Between</h5>
+
           <p itemprop="description">18 Reflections is Kimburi's debut book, written to articulate the complex realities faced by his generation as they grow up amid social, environmental, economic and health challenges.</p>
+
           <p itemprop="author" itemscope itemtype="https://schema.org/Person">
             <span itemprop="name">Jose-Maria Kimburi</span> writes about the divides and epidemics shaping Gen Z, such as mental health, identity, faith, burnout and inequality. Each chapter begins with an anecdote, offering context to anchor the reflection. He wrote this because he needed to. Because silence didn’t feel like an option anymore. Silence has a cost. And he was tired of paying it.
           </p>
+
           <p><i>This is the book many of us needed when we were fourteen. It’s the one many of us still need now.</i></p>
+
           <p>Release date: <time datetime="2026-10-01" itemprop="datePublished">XX.XX.2026</time><br>
             Formats: Paperback, Hardcover & eBook (Amazon Kindle, Apple, Google Play)</p>
 
           <div class="actions" role="group" aria-label="Purchase links for 18 Reflections">
             <a href="https://www.amazon.co.uk/stores/Jose-Maria-Kimburi/author/B0FLM5L52Y?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true"
                target="_blank" rel="noopener noreferrer" class="btn btnPrimary" aria-label="Buy 18 Reflections on Amazon">Amazon</a>
+
             <a href="https://books.apple.com/us/book/18-reflections-divides-epidemics-and-the/id6752995264"
                target="_blank" rel="noopener noreferrer" class="btn btnPrimary" aria-label="Buy 18 Reflections on Apple Books">Apple</a>
+
             <a href="https://play.google.com/store/books"
                target="_blank" rel="noopener noreferrer" class="btn btnPrimary" aria-label="Buy 18 Reflections on Google Play">Google Play</a>
           </div>
@@ -129,7 +126,6 @@
     </footer>
   </main>
 
-  <!-- JSON-LD structured data (use j-mk.com consistently) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -157,41 +153,11 @@
           "price": "15.99",
           "availability": "https://schema.org/InStock"
         }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://j-mk.com/#author",
-        "name": "Jose-Maria Kimburi",
-        "alternateName": ["Jose-Maria","Jose Kimburi","Kimburi","J Kimburi","J-MK","J-Mk"],
-        "url": "https://j-mk.com/",
-        "sameAs": [
-          "https://www.instagram.com/JKimburi"
-        ],
-        "jobTitle": "Author & Filmmaker"
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://j-mk.com/#website",
-        "url": "https://j-mk.com/",
-        "name": "Jose-Maria Kimburi",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://j-mk.com/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://j-mk.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Books", "item": "https://j-mk.com/books.html" }
-        ]
       }
     ]
   }
   </script>
 
-  <!-- Sitemap hint -->
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 </body>
 </html>
