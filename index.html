@@ -71,7 +71,17 @@
 
     /* Hero section */
     .heroGallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1.5rem}
-    .heroGallery img{width:100%;height:250px;object-fit:cover;border-radius:var(--radius)}
+    
+/* ensure images are block-level and have a fixed height for stable layout */
+.heroGallery img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background-color: #0b0b0b; /* helps avoid a flash of empty area */
+}
+    
 
     .heroName{text-align:center;margin-top:2rem}
     .heroName h1{font-family:'Bitter',serif;font-weight:700;font-size:3rem;margin-bottom:.25rem}
@@ -139,18 +149,26 @@
     <!-- Hero gallery -->
     <section class="heroGallery" aria-label="Gallery of images">
       <!-- responsive images with lazy loading and srcset -->
-      <img src="Assets/away.jpg"
-           srcset="Assets/away.jpg 1200w, Assets/away-medium.jpg 800w, Assets/away-small.jpg 480w"
-           sizes="(max-width:880px) 100vw, 33vw"
-           alt="Jose-Maria Kimburi at work" loading="lazy">
-      <img src="Assets/group.jpg"
-           srcset="Assets/group.jpg 1200w, Assets/group-medium.jpg 800w, Assets/group-small.jpg 480w"
-           sizes="(max-width:880px) 100vw, 33vw"
-           alt="Group shot with collaborators" loading="lazy">
-      <img src="Assets/direct.jpg"
-           srcset="Assets/direct.jpg 1200w, Assets/direct-medium.jpg 800w, Assets/direct-small.jpg 480w"
-           sizes="(max-width:880px) 100vw, 33vw"
-           alt="Directing on location" loading="lazy">
+      <img src="/Assets/away.jpg"
+     srcset="/Assets/away.jpg 1200w, /Assets/away-medium.jpg 800w, /Assets/away-small.jpg 480w"
+     sizes="(max-width:880px) 100vw, 33vw"
+     width="1200" height="250"
+     alt="Jose-Maria Kimburi at work"
+     loading="eager" decoding="async">
+
+<img src="/Assets/group.jpg"
+     srcset="/Assets/group.jpg 1200w, /Assets/group-medium.jpg 800w, /Assets/group-small.jpg 480w"
+     sizes="(max-width:880px) 100vw, 33vw"
+     width="1200" height="250"
+     alt="Group shot with collaborators"
+     loading="eager" decoding="async">
+
+<img src="/Assets/direct.jpg"
+     srcset="/Assets/direct.jpg 1200w, /Assets/direct-medium.jpg 800w, /Assets/direct-small.jpg 480w"
+     sizes="(max-width:880px) 100vw, 33vw"
+     width="1200" height="250"
+     alt="Directing on location"
+     loading="eager" decoding="async">
     </section>
 
     <!-- Hero name & signature -->
@@ -253,6 +271,7 @@
 
 </body>
 </html>
+
 
 
 
