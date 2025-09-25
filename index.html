@@ -6,12 +6,39 @@
   <title>Jose-Maria Kimburi</title>
   <meta name="description" content="Author & Filmmaker">
 
+  <!-- Added SEO & discovery metadata (keeps original content) -->
+  <meta name="author" content="Jose-Maria Kimburi">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="Jose-Maria, Jose Kimburi, Jose-Maria Kimburi, Kimburi, Kimburi J, J Kimburi, J-MK, 18 Reflections, 18 Reflections: Divides, Epidemics and the Generation Caught in Between, BioVerse TV">
+  <link rel="canonical" href="https://www.j-mk.com/">
+  <link rel="alternate" hreflang="en-GB" href="https://www.j-mk.com/">
+
+  <!-- Open Graph & Twitter card for richer sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jose-Maria Kimburi">
+  <meta property="og:description" content="Author & Filmmaker — Jose-Maria Kimburi. Books, films and projects including 18 Reflections and BioVerse TV.">
+  <meta property="og:url" content="https://www.j-mk.com/">
+  <meta property="og:image" content="https://www.j-mk.com/Assets/away.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jose-Maria Kimburi">
+  <meta name="twitter:description" content="Author & Filmmaker — Jose-Maria Kimburi. Books, films and projects including 18 Reflections and BioVerse TV.">
+  <meta name="twitter:image" content="https://www.j-mk.com/Assets/away.jpg">
+
   <!-- Favicon -->
-<link rel="icon" href="Assets/favicon.png" type="image/png">
+  <link rel="icon" href="Assets/favicon.png" type="image/png">
+
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="Assets/away.jpg" as="image">
+  <link rel="preload" href="Assets/group.jpg" as="image">
+  <link rel="preload" href="Assets/direct.jpg" as="image">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
+
+  <!-- Optional sitemap hint -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
   <style>
     :root{
@@ -71,6 +98,24 @@
     footer{border-top:1px solid rgba(255,255,255,0.03);padding:1.25rem 0;margin-top:2.5rem;color:var(--muted);font-size:.95rem}
     footer div{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:1.5rem}
     footer a{color:var(--accent);text-decoration:underline}
+
+    /* Accessible visually hidden utility for aliases and seo text */
+    .sr-only {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0 0 0 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+
+    @media(max-width:880px) {
+      .heroGallery img{height:180px}
+      .biographyText h2{font-size:4rem}
+    }
   </style>
 </head>
 <body>
@@ -88,46 +133,61 @@
   </header>
 
   <!-- Main content -->
-  <main class="container">
+  <main class="container" itemscope itemtype="https://schema.org/Person" aria-label="Main content for Jose-Maria Kimburi">
 
     <!-- Hero gallery -->
-   <section class="heroGallery" aria-label="Gallery of images">
-  <img src="Assets/away.jpg" alt="Gallery image 1">
-  <img src="Assets/group.jpg" alt="Gallery image 2">
-  <img src="Assets/direct.jpg" alt="Gallery image 3">
-</section>
+    <section class="heroGallery" aria-label="Gallery of images">
+      <!-- responsive images with lazy loading and srcset -->
+      <img src="Assets/away.jpg"
+           srcset="Assets/away.jpg 1200w, Assets/away-medium.jpg 800w, Assets/away-small.jpg 480w"
+           sizes="(max-width:880px) 100vw, 33vw"
+           alt="Jose-Maria Kimburi at work" loading="lazy">
+      <img src="Assets/group.jpg"
+           srcset="Assets/group.jpg 1200w, Assets/group-medium.jpg 800w, Assets/group-small.jpg 480w"
+           sizes="(max-width:880px) 100vw, 33vw"
+           alt="Group shot with collaborators" loading="lazy">
+      <img src="Assets/direct.jpg"
+           srcset="Assets/direct.jpg 1200w, Assets/direct-medium.jpg 800w, Assets/direct-small.jpg 480w"
+           sizes="(max-width:880px) 100vw, 33vw"
+           alt="Directing on location" loading="lazy">
+    </section>
 
     <!-- Hero name & signature -->
     <section class="heroName">
-      <h1>Jose-Maria Kimburi</h1>
-      <p>Author & Filmmaker</p>
+      <h1 itemprop="name">Jose-Maria Kimburi</h1>
+      <p itemprop="jobTitle">Author & Filmmaker</p>
     </section>
 
+    <!-- Visually hidden aliases for accessibility and natural discovery -->
+    <div class="sr-only" aria-hidden="false">
+      Jose-Maria, Jose Kimburi, Jose-Maria Kimburi, Kimburi J, Kimburi, J Kimburi, J-MK, 18 Reflections, 18 Reflections: Divides, Epidemics and the Generation Caught in Between, BioVerse TV, JKimburi
+    </div>
+
     <!-- Bubble links -->
-    <section class="homeBubbles">
-      <div class="bubbleCard" onclick="location.href='books.html'">
+    <section class="homeBubbles" aria-label="Quick links">
+      <div class="bubbleCard" onclick="location.href='books.html'" role="link" tabindex="0" aria-label="Books — Explore books by Kimburi">
         <h3>Books</h3>
         <p>Explore the books Kimburi has authored as well his upcoming publications.</p>
       </div>
-      <div class="bubbleCard" onclick="location.href='media.html'">
+      <div class="bubbleCard" onclick="location.href='media.html'" role="link" tabindex="0" aria-label="Media — Explore media by Kimburi">
         <h3>Media</h3>
         <p>Explore the documentaries, series and docuseries Kimburi has produced and directed as well as his upcoming projects.</p>
       </div>
     </section>
 
     <!-- Biography section -->
-    <section class="biography">
+    <section class="biography" aria-label="Biography">
       <div class="biographyText">
-        <h2>J.K</h2>
+        <h2 itemprop="alternateName">J.K</h2>
         <br>
-        <p>Jose-Maria Kimburi is an 18-year-old author & filmmaker based in the UK. His work explores both human and physical change through geography, with creative projects centred around people-place relationships.</p>
+        <p itemprop="description">Jose-Maria Kimburi is an 18-year-old author & filmmaker based in the UK. His work explores both human and physical change through geography, with creative projects centred around people-place relationships.</p>
         <p><i>18 Reflections: Divides, Epidemics and the Generation Caught in Between is his debut book, written to articulate the complex realities his generation faces as they grow up amid social, environmental, economic and health challenges.</i></p>
         <p><i>BioVerse TV: Unplugging from Social Media is his debut documentary, encouraging people to step back from the constant busyness of digital life and reconnect with the natural world. The film highlights the mental health benefits of spending time in nature while showcasing its beauty and biodiversity. By weaving together personal experiences, expert interviews and practical advice, BioVerse TV presents a refreshing and accessible way to rethink our relationship with both technology and the environment.</i></p>
 
-        <section class="updates">
+        <section class="updates" aria-label="Updates">
           <div class="updatesText">
             <p>Both his debut book and debut documentary will be released in the coming months.</p>
-            <p>Follow his Instagram (<a href="https://instagram.com/JKimburi" target="_blank">@JKimburi</a>) for more information and updates.</p>
+            <p>Follow his Instagram (<a href="https://instagram.com/JKimburi" target="_blank" rel="noopener noreferrer" aria-label="Follow JKimburi on Instagram">@JKimburi</a>) for more information and updates.</p>
             <p>
               <a href="mailto:info@j-mk.com">info@j-mk.com</a> - General Enquiries<br>
               <a href="mailto:books@j-mk.com">books@j-mk.com</a> - Book Enquiries<br>
@@ -148,25 +208,47 @@
 
   </main>
 
+  <!-- JSON-LD structured data: Person, WebSite, BreadcrumbList and SearchAction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://www.j-mk.com/#person",
+        "name": "Jose-Maria Kimburi",
+        "alternateName": ["Jose-Maria","Jose Kimburi","Kimburi J","Kimburi","J Kimburi","J-MK","JKimburi","J-Mk"],
+        "jobTitle": "Author, Filmmaker, Geographer",
+        "url": "https://www.j-mk.com/",
+        "image": "https://www.j-mk.com/Assets/away.jpg",
+        "sameAs": [
+          "https://www.instagram.com/JKimburi"
+          /* add other social profiles here */
+        ],
+        "description": "Jose-Maria Kimburi is an author and filmmaker whose work explores human and physical change through geography. Author of 18 Reflections and director of BioVerse TV."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.j-mk.com/#website",
+        "url": "https://www.j-mk.com/",
+        "name": "Jose-Maria Kimburi",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.j-mk.com/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.j-mk.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Books", "item": "https://www.j-mk.com/books/" },
+          { "@type": "ListItem", "position": 3, "name": "Media", "item": "https://www.j-mk.com/media/" }
+        ]
+      }
+    ]
+  }
+  </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
