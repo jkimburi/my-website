@@ -1,229 +1,476 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <title>Media | Jose-Maria Kimburi</title>
-  <meta name="description" content="Media and film work by Jose-Maria Kimburi.">
+    <title>Media | Jose-Maria Kimburi</title>
+    <meta name="description" content="Media and film work by Jose-Maria Kimburi.">
 
-  <!-- SEO & discovery metadata -->
-  <meta name="author" content="Jose-Maria Kimburi">
-  <meta name="robots" content="index, follow">
-  <meta name="keywords" content="Jose-Maria, Jose Kimburi, Jose-Maria Kimburi, Kimburi, Kimburi J, J Kimburi, J-MK, 18 Reflections, BioVerse TV, BioVerse TV Unplugging from Social Media, JKimburi, documentary, teaser">
-  <link rel="canonical" href="https://j-mk.com/media">
-  <link rel="alternate" hreflang="en-GB" href="https://j-mk.com/media">
+    <!-- Added SEO & discovery metadata (keeps original content) -->
+    <meta name="author" content="Jose-Maria Kimburi">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Jose-Maria, Jose Kimburi, Jose-Maria Kimburi, Kimburi, Kimburi J, J Kimburi, J-MK, 18 Reflections, BioVerse TV, BioVerse TV Unplugging from Social Media, JKimburi, documentary, teaser">
 
-  <!-- Open Graph & Twitter card -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Media | Jose-Maria Kimburi">
-  <meta property="og:description" content="Media and film work by Jose-Maria Kimburi, including BioVerse TV: Unplugging from Social Media.">
-  <meta property="og:url" content="https://j-mk.com/media">
-  <meta property="og:image" content="https://j-mk.com/Assets/direct.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Media | Jose-Maria Kimburi">
-  <meta name="twitter:description" content="Media and film work by Jose-Maria Kimburi, including BioVerse TV: Unplugging from Social Media.">
-  <meta name="twitter:image" content="https://j-mk.com/Assets/direct.jpg">
+    <link rel="canonical" href="https://www.j-mk.com/media/">
+    <link rel="alternate" hreflang="en-GB" href="https://www.j-mk.com/media/">
 
-  <!-- Favicon -->
-  <link rel="icon" href="/Assets/favicon.png" type="image/png">
+    <!-- Open Graph & Twitter card for richer sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Media | Jose-Maria Kimburi">
+    <meta property="og:description" content="Media and film work by Jose-Maria Kimburi, including BioVerse TV: Unplugging from Social Media.">
+    <meta property="og:url" content="https://www.j-mk.com/media/">
+    <meta property="og:image" content="https://www.j-mk.com/Assets/direct.jpg">
 
-  <!-- Performance hints -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="/Assets/direct.jpg" as="image">
-  <link rel="preload" href="https://img.youtube.com/vi/XykgaUQwXy4/hqdefault.jpg" as="image">
-  <link rel="preload" href="https://img.youtube.com/vi/ul8YApOvM2c/hqdefault.jpg" as="image">
-  <link rel="preload" href="https://img.youtube.com/vi/ejZUEKCKmsM/hqdefault.jpg" as="image">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Media | Jose-Maria Kimburi">
+    <meta name="twitter:description" content="Media and film work by Jose-Maria Kimburi, including BioVerse TV: Unplugging from Social Media.">
+    <meta name="twitter:image" content="https://www.j-mk.com/Assets/direct.jpg">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="Assets/favicon.png" type="image/png">
 
-  <!-- Sitemap hint -->
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <!-- Performance hints -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="Assets/direct.jpg" as="image">
+    <link rel="preload" href="https://img.youtube.com/vi/XykgaUQwXy4/hqdefault.jpg" as="image">
+    <link rel="preload" href="https://img.youtube.com/vi/ul8YApOvM2c/hqdefault.jpg" as="image">
+    <link rel="preload" href="https://img.youtube.com/vi/ejZUEKCKmsM/hqdefault.jpg" as="image">
 
-  <!-- Styles omitted for brevity -->
-</head>
-<body>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <header class="siteHeader">
-    <div class="container row">
-      <nav aria-label="Primary navigation">
-        <ul class="navList">
-          <li><a class="navLink" href="/">Home</a></li>
-          <li><a class="navLink" href="/books">Books</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- Optional sitemap hint -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
-  <main class="container" itemscope itemtype="https://schema.org/CreativeWork" aria-label="Media and film work by Jose-Maria Kimburi">
-    <div class="sr-only" aria-hidden="false">
-      Jose-Maria, Jose Kimburi, Jose-Maria Kimburi, Kimburi J, Kimburi, J Kimburi, J-MK, JKimburi, 18 Reflections, BioVerse TV, BioVerse TV Unplugging from Social Media, BioVerse TV documentary
-    </div>
+    <style>
+      :root {
+        --bg: #0f1115;
+        --muted: #9aa0a6;
+        --accent: #7bd389;
+        --card: rgba(255,255,255,0.02);
+        --radius: 12px;
+        --maxWidth: 1100px;
+        --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      }
 
-    <section class="grid">
-      <div class="mediaCard">
-        <div class="mediaMeta">
-          <div class="metaLeft">
-            <strong itemprop="name">BioVerse TV: Unplugging from Social Media</strong>
-            <p class="muted">Take a look at my debut documentary.</p>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: linear-gradient(180deg,#07070a 0%,var(--bg) 100%);
+        color: #e7e9ec;
+        font-family: var(--font);
+        line-height: 1.45;
+        font-size: 16px;
+      }
+
+      .container {
+        max-width: var(--maxWidth);
+        margin: 0 auto;
+        padding: 1.25rem;
+      }
+
+      /* Move content closer to header */
+      main.container {
+        margin-top: -1.5rem;
+      }
+
+      /* Header */
+      header {
+        padding: 1rem 0;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        justify-content: center;
+      }
+
+      .navLink {
+        color: var(--muted);
+        text-decoration: none;
+        padding: .4rem .6rem;
+        border-radius: 8px;
+      }
+
+      .navLink:hover {
+        background: rgba(255,255,255,0.03);
+        color: #fff;
+      }
+
+      /* Media grid */
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .mediaCard {
+        background: var(--card);
+        padding: 1rem;
+        border-radius: var(--radius);
+      }
+
+      .mediaMeta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .6rem;
+      }
+
+      .metaLeft {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .metaLeft p {
+        color: var(--muted);
+      }
+
+      .videoGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .videoItem {
+        border-radius: 10px;
+        overflow: hidden;
+        background: rgba(255,255,255,0.02);
+      }
+
+      .videoMeta {
+        padding: .85rem;
+      }
+
+      .videoWrap {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+      }
+
+      .videoWrap iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .actions {
+        display: flex;
+        gap: .6rem;
+        margin-top: .6rem;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: .45rem .8rem;
+        border-radius: 9px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .btnPrimary {
+        background: linear-gradient(90deg,var(--accent),#5bcf9a);
+        color: #08110a;
+      }
+
+      .btnGhost {
+        border: 1px solid rgba(255,255,255,0.06);
+        color: var(--muted);
+        background: transparent;
+      }
+
+      footer {
+        border-top: 1px solid rgba(255,255,255,0.03);
+        padding: 1.25rem 0;
+        margin-top: 2.5rem;
+        color: var(--muted);
+        font-size: .95rem;
+      }
+
+      footer a {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+
+      @media (min-width: 880px) {
+        .videoGrid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* Accessible visually hidden utility for aliases and seo text */
+      .sr-only {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0 0 0 0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="siteHeader">
+      <div class="container row">
+        <nav aria-label="Primary navigation">
+          <ul class="navList">
+            <li><a class="navLink" href="index.html">Home</a></li>
+            <li><a class="navLink" href="books.html">Books</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" itemscope itemtype="https://schema.org/CreativeWork" aria-label="Media and film work by Jose-Maria Kimburi">
+      <!-- Visually hidden aliases for accessibility and natural discovery -->
+      <div class="sr-only" aria-hidden="false">
+        Jose-Maria, Jose Kimburi, Jose-Maria Kimburi, Kimburi J, Kimburi, J Kimburi, J-MK, JKimburi, 18 Reflections, BioVerse TV, BioVerse TV Unplugging from Social Media, BioVerse TV, BioVerse documentary
+      </div>
+
+      <section class="grid">
+        <div class="mediaCard">
+          <div class="mediaMeta">
+            <div class="metaLeft">
+              <strong itemprop="name">BioVerse TV: Unplugging from Social Media</strong>
+              <p class="muted">Take a look at my debut documentary.</p>
+            </div>
+          </div>
+
+          <div class="videoGrid">
+            <!-- Video 1 -->
+            <article class="videoItem" itemscope itemtype="https://schema.org/VideoObject" aria-labelledby="video1-title">
+              <div class="videoWrap">
+                <iframe
+                  loading="lazy"
+                  src="https://www.youtube.com/embed/XykgaUQwXy4?si=oX1gL6idvL12PLXt"
+                  title="BioVerse TV: Unplugging from Social Media | Official Teaser 1"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+
+              <div class="videoMeta">
+                <h3 id="video1-title">BioVerse TV: Unplugging from Social Media | Official Teaser 1</h3>
+                <p class="muted">
+                  In this short snippet from BioVerse TV: Unplugging from Social Media, Jessica shares her personal
+                  experience of stepping away from constant digital stimulation and rediscovering peace through time
+                  spent outdoors.
+                </p>
+
+                <div class="actions">
+                  <a
+                    class="btn btnPrimary"
+                    href="https://youtu.be/XykgaUQwXy4?si=oX1gL6idvL12PLXt"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open Teaser 1 on YouTube">
+                    Open on YouTube
+                  </a>
+                </div>
+
+                <!-- Microdata for VideoObject -->
+                <meta itemprop="embedUrl" content="https://www.youtube.com/embed/XykgaUQwXy4?si=oX1gL6idvL12PLXt">
+                <meta itemprop="contentUrl" content="https://youtu.be/XykgaUQwXy4">
+                <meta itemprop="thumbnailUrl" content="https://img.youtube.com/vi/XykgaUQwXy4/hqdefault.jpg">
+                <meta itemprop="description" content="Teaser 1 for BioVerse TV: Unplugging from Social Media.">
+              </div>
+            </article>
+
+            <!-- Video 2 -->
+            <article class="videoItem" itemscope itemtype="https://schema.org/VideoObject" aria-labelledby="video2-title">
+              <div class="videoWrap">
+                <iframe
+                  loading="lazy"
+                  src="https://www.youtube.com/embed/ul8YApOvM2c?si=_858SxjHbDiN-DzA"
+                  title="BioVerse TV: Unplugging from Social Media | Official Teaser 2"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+
+              <div class="videoMeta">
+                <h3 id="video2-title">BioVerse TV: Unplugging from Social Media | Official Teaser 2</h3>
+                <p class="muted">
+                  Lucy Lapwing, one of the faces of BBC Springwatch, joins BioVerse TV: Unplugging from Social Media,
+                  sharing her experiences and expertise.
+                </p>
+
+                <div class="actions">
+                  <a
+                    class="btn btnPrimary"
+                    href="https://youtu.be/ul8YApOvM2c?si=_858SxjHbDiN-DzA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open Teaser 2 on YouTube">
+                    Open on YouTube
+                  </a>
+                </div>
+
+                <!-- Microdata for VideoObject -->
+                <meta itemprop="embedUrl" content="https://www.youtube.com/embed/ul8YApOvM2c?si=_858SxjHbDiN-DzA">
+                <meta itemprop="contentUrl" content="https://youtu.be/ul8YApOvM2c">
+                <meta itemprop="thumbnailUrl" content="https://img.youtube.com/vi/ul8YApOvM2c/hqdefault.jpg">
+                <meta itemprop="description" content="Teaser 2 for BioVerse TV: Unplugging from Social Media featuring Lucy Lapwing.">
+              </div>
+            </article>
+
+            <!-- Video 3 -->
+            <article class="videoItem" itemscope itemtype="https://schema.org/VideoObject" aria-labelledby="video3-title">
+              <div class="videoWrap">
+                <iframe
+                  loading="lazy"
+                  src="https://www.youtube.com/embed/ejZUEKCKmsM?si=e3BwQzGDGzeDpe9Z"
+                  title="BioVerse TV: Unplugging from Social Media | Official Documentary Trailer"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+
+              <div class="videoMeta">
+                <h3 id="video3-title">BioVerse TV: Unplugging from Social Media | Official Documentary Trailer | 11/10/25</h3>
+                <p class="muted">
+                  This documentary explores the mental health benefits of stepping away from the digital world and
+                  rediscovering the natural world around us.
+                  <br>
+                  Full documentary out on Saturday 25th October 2025 at 18:00 BST.
+                </p>
+
+                <div class="actions">
+                  <a
+                    class="btn btnPrimary"
+                    href="https://youtu.be/ejZUEKCKmsM?si=e3BwQzGDGzeDpe9Z"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open documentary trailer on YouTube">
+                    Open on YouTube
+                  </a>
+                </div>
+
+                <!-- Microdata for VideoObject -->
+                <meta itemprop="embedUrl" content="https://www.youtube.com/embed/ejZUEKCKmsM?si=e3BwQzGDGzeDpe9Z">
+                <meta itemprop="contentUrl" content="https://youtu.be/ejZUEKCKmsM">
+                <meta itemprop="thumbnailUrl" content="https://img.youtube.com/vi/ejZUEKCKmsM/hqdefault.jpg">
+                <meta itemprop="description" content="Official documentary trailer for BioVerse TV: Unplugging from Social Media.">
+                <meta itemprop="uploadDate" content="2025-10-11">
+                <meta itemprop="publication" content="2025-10-25T18:00:00+01:00">
+              </div>
+            </article>
           </div>
         </div>
 
-        <div class="videoGrid">
+        <aside class="mediaCard" itemscope itemtype="https://schema.org/CreativeWork">
+          <h3 style="margin-bottom:.5rem">Additional resources</h3>
+          <p class="muted">Media contact: <a href="mailto:media@j-mk.com" rel="noopener noreferrer">media@j-mk.com</a></p>
+        </aside>
+      </section>
 
-          <!-- Video 1 -->
-          <article class="videoItem" itemscope itemtype="https://schema.org/VideoObject" aria-labelledby="video1-title">
-            <div class="videoWrap">
-              <iframe loading="lazy" src="https://www.youtube.com/embed/XykgaUQwXy4?si=oX1gL6idvL12PLXt" title="BioVerse TV: Unplugging from Social Media | Official Teaser 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="videoMeta">
-              <h3 id="video1-title">BioVerse TV: Unplugging from Social Media | Official Teaser 1</h3>
-              <p class="muted">In this short snippet from BioVerse TV: Unplugging from Social Media, Jessica shares her personal experience of stepping away from constant digital stimulation and rediscovering peace through time spent outdoors.</p>
-              <div class="actions">
-                <a class="btn btnPrimary" href="https://youtu.be/XykgaUQwXy4?si=oX1gL6idvL12PLXt" target="_blank" rel="noopener noreferrer" aria-label="Open Teaser 1 on YouTube">Open on YouTube</a>
-              </div>
-
-              <!-- Microdata for VideoObject -->
-              <meta itemprop="embedUrl" content="https://www.youtube.com/embed/XykgaUQwXy4?si=oX1gL6idvL12PLXt">
-              <meta itemprop="contentUrl" content="https://youtu.be/XykgaUQwXy4">
-              <meta itemprop="thumbnailUrl" content="https://img.youtube.com/vi/XykgaUQwXy4/hqdefault.jpg">
-              <meta itemprop="description" content="Teaser 1 for BioVerse TV: Unplugging from Social Media.">
-            </div>
-          </article>
-
-          <!-- Video 2 -->
-          <article class="videoItem" itemscope itemtype="https://schema.org/VideoObject" aria-labelledby="video2-title">
-            <div class="videoWrap">
-              <iframe loading="lazy" src="https://www.youtube.com/embed/ul8YApOvM2c?si=_858SxjHbDiN-DzA" title="BioVerse TV: Unplugging from Social Media | Official Teaser 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="videoMeta">
-              <h3 id="video2-title">BioVerse TV: Unplugging from Social Media | Official Teaser 2</h3>
-              <p class="muted">Lucy Lapwing, one of the faces of BBC Springwatch, joins BioVerse TV: Unplugging from Social Media, sharing her experiences and expertise.</p>
-              <div class="actions">
-                <a class="btn btnPrimary" href="https://youtu.be/ul8YApOvM2c?si=_858SxjHbDiN-DzA" target="_blank" rel="noopener noreferrer" aria-label="Open Teaser 2 on YouTube">Open on YouTube</a>
-              </div>
-
-              <!-- Microdata for VideoObject -->
-              <meta itemprop="embedUrl" content="https://www.youtube.com/embed/ul8YApOvM2c?si=_858SxjHbDiN-DzA">
-              <meta itemprop="contentUrl" content="https://youtu.be/ul8YApOvM2c">
-              <meta itemprop="thumbnailUrl" content="https://img.youtube.com/vi/ul8YApOvM2c/hqdefault.jpg">
-              <meta itemprop="description" content="Teaser 2 for BioVerse TV: Unplugging from Social Media featuring Lucy Lapwing.">
-            </div>
-          </article>
-
-          <!-- Video 3 -->
-          <article class="videoItem" itemscope itemtype="https://schema.org/VideoObject" aria-labelledby="video3-title">
-            <div class="videoWrap">
-              <iframe loading="lazy" src="https://www.youtube.com/embed/ejZUEKCKmsM?si=e3BwQzGDGzeDpe9Z" title="BioVerse TV: Unplugging from Social Media | Official Documentary Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="videoMeta">
-              <h3 id="video3-title">BioVerse TV: Unplugging from Social Media | Official Documentary Trailer | 11/10/25</h3>
-              <p class="muted">This documentary explores the mental health benefits of stepping away from the digital world and rediscovering the natural world around us. <br> Full documentary out on Saturday 25th October 2025 at 18:00 BST.</p>
-              <div class="actions">
-                <a class="btn btnPrimary" href="https://youtu.be/ejZUEKCKmsM?si=e3BwQzGDGzeDpe9Z" target="_blank" rel="noopener noreferrer" aria-label="Open documentary trailer on YouTube">Open on YouTube</a>
-              </div>
-
-              <!-- Microdata for VideoObject -->
-              <meta itemprop="embedUrl" content="https://www.youtube.com/embed/ejZUEKCKmsM?si=e3BwQzGDGzeDpe9Z">
-              <meta itemprop="contentUrl" content="https://youtu.be/ejZUEKCKmsM">
-              <meta itemprop="thumbnailUrl" content="https://img.youtube.com/vi/ejZUEKCKmsM/hqdefault.jpg">
-              <meta itemprop="description" content="Official documentary trailer for BioVerse TV: Unplugging from Social Media.">
-              <meta itemprop="uploadDate" content="2025-10-11">
-            </div>
-          </article>
-
+      <footer>
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:1.5rem">
+          <p>© 2025 Jose-Maria Kimburi. All rights reserved.</p>
+          <p class="muted">For all general enquiries, email <a href="mailto:info@j-mk.com" style="color:#7bd389; text-decoration:underline" rel="noopener noreferrer">info@j-mk.com</a></p>
         </div>
-      </div>
+      </footer>
+    </main>
 
-      <aside class="mediaCard" itemscope itemtype="https://schema.org/CreativeWork">
-        <h3 style="margin-bottom:.5rem">Additional resources</h3>
-        <p class="muted">Media contact: <a href="mailto:media@j-mk.com" rel="noopener noreferrer">media@j-mk.com</a></p>
-      </aside>
-    </section>
-
-    <footer>
-      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:1.5rem">
-        <p>© 2025 Jose-Maria Kimburi. All rights reserved.</p>
-        <p class="muted">For all general enquiries, email <a href="mailto:info@j-mk.com" style="color:#7bd389; text-decoration:underline" rel="noopener noreferrer">info@j-mk.com</a></p>
-      </div>
-    </footer>
-  </main>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
+    <!-- JSON-LD structured data: Person, WebSite, BreadcrumbList and VideoObjects -->
+    <script type="application/ld+json">
       {
-        "@type": "Person",
-        "@id": "https://j-mk.com/#person",
-        "name": "Jose-Maria Kimburi",
-        "alternateName": ["Jose-Maria","Jose Kimburi","Kimburi J","Kimburi","J Kimburi","J-MK","JKimburi","J-Mk"],
-        "jobTitle": "Author & Filmmaker",
-        "url": "https://j-mk.com/",
-        "image": "https://j-mk.com/Assets/direct.jpg",
-        "sameAs": [
-          "https://www.instagram.com/JKimburi"
-        ],
-        "description": "Jose-Maria Kimburi is an author and filmmaker whose work explores human and physical change through geography. Director of BioVerse TV: Unplugging from Social Media."
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://j-mk.com/#website",
-        "url": "https://j-mk.com/",
-        "name": "Jose-Maria Kimburi",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://j-mk.com/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://j-mk.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Media", "item": "https://j-mk.com/media" }
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://www.j-mk.com/#person",
+            "name": "Jose-Maria Kimburi",
+            "alternateName": ["Jose-Maria","Jose Kimburi","Kimburi J","Kimburi","J Kimburi","J-MK","JKimburi","J-Mk"],
+            "jobTitle": "Author & Filmmaker",
+            "url": "https://www.j-mk.com/",
+            "image": "https://www.j-mk.com/Assets/direct.jpg",
+            "sameAs": [
+              "https://www.instagram.com/JKimburi"
+            ],
+            "description": "Jose-Maria Kimburi is an author and filmmaker whose work explores human and physical change through geography. Director of BioVerse TV: Unplugging from Social Media."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.j-mk.com/#website",
+            "url": "https://www.j-mk.com/",
+            "name": "Jose-Maria Kimburi",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.j-mk.com/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.j-mk.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Media",
+                "item": "https://www.j-mk.com/media/"
+              }
+            ]
+          },
+          {
+            "@type": "VideoObject",
+            "@id": "https://www.j-mk.com/media/#video1",
+            "name": "BioVerse TV: Unplugging from Social Media | Official Teaser 1",
+            "description": "Teaser 1 for BioVerse TV: Unplugging from Social Media. Jessica shares her experience stepping away from digital life.",
+            "thumbnailUrl": "https://img.youtube.com/vi/XykgaUQwXy4/hqdefault.jpg",
+            "embedUrl": "https://www.youtube.com/embed/XykgaUQwXy4",
+            "contentUrl": "https://youtu.be/XykgaUQwXy4",
+            "uploadDate": "2025-09-01"
+          },
+          {
+            "@type": "VideoObject",
+            "@id": "https://www.j-mk.com/media/#video2",
+            "name": "BioVerse TV: Unplugging from Social Media | Official Teaser 2",
+            "description": "Teaser 2 featuring Lucy Lapwing for BioVerse TV: Unplugging from Social Media.",
+            "thumbnailUrl": "https://img.youtube.com/vi/ul8YApOvM2c/hqdefault.jpg",
+            "embedUrl": "https://www.youtube.com/embed/ul8YApOvM2c",
+            "contentUrl": "https://youtu.be/ul8YApOvM2c",
+            "uploadDate": "2025-09-01"
+          },
+          {
+            "@type": "VideoObject",
+            "@id": "https://www.j-mk.com/media/#video3",
+            "name": "BioVerse TV: Unplugging from Social Media | Official Documentary Trailer",
+            "description": "Official documentary trailer for BioVerse TV: Unplugging from Social Media.",
+            "thumbnailUrl": "https://img.youtube.com/vi/ejZUEKCKmsM/hqdefault.jpg",
+            "embedUrl": "https://www.youtube.com/embed/ejZUEKCKmsM",
+            "contentUrl": "https://youtu.be/ejZUEKCKmsM",
+            "uploadDate": "2025-10-11",
+            "publication": {
+              "@type": "BroadcastEvent",
+              "startDate": "2025-10-25T18:00:00+01:00",
+              "name": "BioVerse TV full documentary release"
+            }
+          }
         ]
-      },
-
-      {
-        "@type": "VideoObject",
-        "@id": "https://j-mk.com/media#video1",
-        "name": "BioVerse TV: Unplugging from Social Media | Official Teaser 1",
-        "description": "Teaser 1 for BioVerse TV: Unplugging from Social Media. Jessica shares her experience stepping away from digital life.",
-        "thumbnailUrl": "https://img.youtube.com/vi/XykgaUQwXy4/hqdefault.jpg",
-        "embedUrl": "https://www.youtube.com/embed/XykgaUQwXy4",
-        "contentUrl": "https://youtu.be/XykgaUQwXy4",
-        "uploadDate": "2025-09-01"
-      },
-      {
-        "@type": "VideoObject",
-        "@id": "https://j-mk.com/media#video2",
-        "name": "BioVerse TV: Unplugging from Social Media | Official Teaser 2",
-        "description": "Teaser 2 featuring Lucy Lapwing for BioVerse TV: Unplugging from Social Media.",
-        "thumbnailUrl": "https://img.youtube.com/vi/ul8YApOvM2c/hqdefault.jpg",
-        "embedUrl": "https://www.youtube.com/embed/ul8YApOvM2c",
-        "contentUrl": "https://youtu.be/ul8YApOvM2c",
-        "uploadDate": "2025-09-01"
-      },
-      {
-        "@type": "VideoObject",
-        "@id": "https://j-mk.com/media#video3",
-        "name": "BioVerse TV: Unplugging from Social Media | Official Documentary Trailer",
-        "description": "Official documentary trailer for BioVerse TV: Unplugging from Social Media.",
-        "thumbnailUrl": "https://img.youtube.com/vi/ejZUEKCKmsM/hqdefault.jpg",
-        "embedUrl": "https://www.youtube.com/embed/ejZUEKCKmsM",
-        "contentUrl": "https://youtu.be/ejZUEKCKmsM",
-        "uploadDate": "2025-10-11",
-        "publication": {
-          "@type": "BroadcastEvent",
-          "startDate": "2025-10-25T18:00:00+01:00",
-          "name": "BioVerse TV full documentary release"
-        }
       }
-    ]
-  }
-  </script>
-
-</body>
+    </script>
+  </body>
 </html>
