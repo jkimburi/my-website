@@ -124,14 +124,10 @@ header nav { display: flex; justify-content: center; }
 .btnGhost { border: 1px solid rgba(255,255,255,0.06); color: var(--muted); background: transparent; }
 
 .actions {
-  display: block;
-  text-align: center; /* centres inline or inline-block children */
-  margin-top: .6rem;
-}
-
-.actions .btn {
-  display: inline-block; /* keep the button sized nicely */
-  margin: 0;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
 }
 
 
@@ -168,6 +164,7 @@ footer div {
     margin-top: .75rem;
   }
 }
+
 
 
 
