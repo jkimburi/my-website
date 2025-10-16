@@ -123,16 +123,24 @@ header nav { display: flex; justify-content: center; }
 .btnPrimary { background: linear-gradient(90deg,var(--accent),#5bcf9a); color: #08110a; }
 .btnGhost { border: 1px solid rgba(255,255,255,0.06); color: var(--muted); background: transparent; }
 
-/* centre the action buttons within each video meta */
 .actions {
   display: flex;
-  justify-content: centre; /* note: British spelling allowed in comments only; keep 'center' in real CSS */
-  justify-content: center; /* actual property the browser reads */
+  justify-content: center;
   align-items: center;
   gap: .6rem;
   margin-top: .6rem;
-  width: 100%;
 }
+
+/* on very small screens make the button a centred block */
+@media (max-width: 520px) {
+  .actions .btn {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: .5rem auto 0;
+  }
+}
+
 
 /* ===========================
    Footer
@@ -167,6 +175,7 @@ footer div {
     margin-top: .75rem;
   }
 }
+
 
 
 
