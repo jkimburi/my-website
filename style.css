@@ -129,9 +129,9 @@ header nav { display: flex; justify-content: center; }
   align-items: center;
   gap: .6rem;
   margin-top: .6rem;
+  width: 100%; /* ensures the actions box fills the parent so centring works */
 }
 
-/* on very small screens make the button a centred block */
 @media (max-width: 520px) {
   .actions .btn {
     display: block;
@@ -175,6 +175,7 @@ footer div {
     margin-top: .75rem;
   }
 }
+
 
 
 
