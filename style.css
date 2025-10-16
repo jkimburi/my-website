@@ -158,6 +158,13 @@ footer div {
   }
 }
 
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .6rem;
+  margin-top: .6rem;
+}
 
 
 
